@@ -18,7 +18,7 @@
   localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
   translate: undefined,
   noticeOutdate: undefined,
-  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":300},
   copy: {
     success: '复制成功',
     error: '复制错误',
@@ -155,241 +155,257 @@
       }
       detectApple()
     })(window)</script><link rel="stylesheet" href="//at.alicdn.com/t/c/font_4519565_hnncukau55l.css"><meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="无声之地" type="application/atom+xml">
-</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/notes/"><i class="fa-fw iconfont icon-5"></i><span> 笔记</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url('/pic/lxj_banner.png')"><nav id="nav"><span id="blog-info"><a href="/" title="无声之地"><span class="site-name">无声之地</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/notes/"><i class="fa-fw iconfont icon-5"></i><span> 笔记</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">老乡鸡菜谱</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-04-19T03:05:24.000Z" title="发表于 2024-04-19 11:05:24">2024-04-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-04-19T07:26:31.000Z" title="更新于 2024-04-19 15:26:31">2024-04-19</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="老乡鸡菜谱"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>2024年4月8日中午开始，安徽、江苏地区知名连锁中式快餐品牌<a target="_blank" rel="noopener" href="https://weibo.com/n/老乡鸡">老乡鸡</a>开始连续发布微博，公开其内部文件《老乡鸡菜品溯源报告》中的各项餐饮信息，如加工方式占比、原料来源、餐厅操作工艺、供应商等，后续更是在Gitee上将这份内部报告“开源”，内容翔实丰富，大量信息公开，在网络上引起了不小的讨论热度。</p>
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">20</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/notes/"><i class="fa-fw iconfont icon-5"></i><span> 笔记</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url('/pic/lxj_banner.png')"><nav id="nav"><span id="blog-info"><a href="/" title="无声之地"><span class="site-name">无声之地</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/notes/"><i class="fa-fw iconfont icon-5"></i><span> 笔记</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">老乡鸡菜谱</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-04-19T03:05:24.000Z" title="发表于 2024-04-19 11:05:24">2024-04-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-04-19T07:26:31.000Z" title="更新于 2024-04-19 15:26:31">2024-04-19</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="老乡鸡菜谱"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1>前言</h1>
+<p>2024年4月8日中午开始，安徽、江苏地区知名连锁中式快餐品牌<a target="_blank" rel="noopener" href="https://weibo.com/n/%E8%80%81%E4%B9%A1%E9%B8%A1">老乡鸡</a>开始连续发布微博，公开其内部文件《老乡鸡菜品溯源报告》中的各项餐饮信息，如加工方式占比、原料来源、餐厅操作工艺、供应商等，后续更是在Gitee上将这份内部报告“开源”，内容翔实丰富，大量信息公开，在网络上引起了不小的讨论热度。</p>
 <p>Gitee仓库在<a target="_blank" rel="noopener" href="https://gitee.com/lxjchina/traceability-report-of-dishes?_from=gitee_search">这里</a>，溯源报告下载链接在<a target="_blank" rel="noopener" href="https://gitee.com/lxjchina/traceability-report-of-dishes/releases/download/V1.0/%E8%80%81%E4%B9%A1%E9%B8%A1%E8%8F%9C%E5%93%81%E6%BA%AF%E6%BA%90%E6%8A%A5%E5%91%8A2024-04-02.pdf">这里</a>或者<a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/blob/main/%E8%80%81%E4%B9%A1%E9%B8%A1%E8%8F%9C%E5%93%81%E6%BA%AF%E6%BA%90%E6%8A%A5%E5%91%8A.pdf">这里</a>。</p>
 <p>作者认为，</p>
 <ol>
 <li>公开菜谱、精确到克的食材表，和详尽的烹饪流程，为网友和社会提供了一份异常丰富的菜谱。标准化的制作流程为复现和调整提供了非常多的操作空间；</li>
 <li>公开详细的供应商、供应链信息、供应指标，为餐饮行业尤其是一些中小规模的餐馆提供了一份很不错的采购参考单。而且他自己有成型的供应链也完全不惧怕同行的后发威胁。</li>
-<li>我多了一份超级详细的当代安徽-江苏口味的菜谱！安徽口味重油盐，适当减配后刚好适合我。  </li>
+<li>我多了一份超级详细的当代安徽-江苏口味的菜谱！安徽口味重油盐，适当减配后刚好适合我。</li>
 </ol>
 <p>一些网友把报告中的菜谱单独整理成<a target="_blank" rel="noopener" href="https://github.com/Gar-b-age/CookLikeHOC">仓库</a>，本文整理成网页索引形式（索引到我自己fork的仓库），方便后续查找。</p>
 <hr>
-<h1 id="主食"><a href="#主食" class="headerlink" title="主食"></a><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/tree/main/主食">主食</a></h1><ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/主食/大大大块牛腩面.md">大大大块牛腩面</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/主食/大排面.md">大排面</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/主食/大盘肥肠鸡手工面.md">大盘肥肠鸡手工面</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/主食/杂粮饭.md">杂粮饭</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/主食/浓香整块鸡汤面.md">浓香整块鸡汤面</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/主食/炸鸡腿时蔬面.md">炸鸡腿时蔬面</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/主食/特色鸡汤馄饨.md">特色鸡汤馄饨</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/主食/番茄鸡蛋面.md">番茄鸡蛋面</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/主食/砂锅荠菜鲜肉馄饨.md">砂锅荠菜鲜肉馄饨</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/主食/米饭.md">米饭</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/主食/素面.md">素面</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/主食/老鸡扬米面.md">老鸡扬米面</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/主食/肥西老母鸡汤面.md">肥西老母鸡汤面</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/主食/雪菜肉丝面.md">雪菜肉丝面</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/主食/香菇鸡汤面.md">香菇鸡汤面</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/主食/香辣牛肉面.md">香辣牛肉面</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/主食/香辣鸡丁拌面.md">香辣鸡丁拌面</a></li>
+<h1><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/tree/main/%E4%B8%BB%E9%A3%9F">主食</a></h1>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E4%B8%BB%E9%A3%9F/%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%9D%97%E7%89%9B%E8%85%A9%E9%9D%A2.md">大大大块牛腩面</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E4%B8%BB%E9%A3%9F/%E5%A4%A7%E6%8E%92%E9%9D%A2.md">大排面</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E4%B8%BB%E9%A3%9F/%E5%A4%A7%E7%9B%98%E8%82%A5%E8%82%A0%E9%B8%A1%E6%89%8B%E5%B7%A5%E9%9D%A2.md">大盘肥肠鸡手工面</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E4%B8%BB%E9%A3%9F/%E6%9D%82%E7%B2%AE%E9%A5%AD.md">杂粮饭</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E4%B8%BB%E9%A3%9F/%E6%B5%93%E9%A6%99%E6%95%B4%E5%9D%97%E9%B8%A1%E6%B1%A4%E9%9D%A2.md">浓香整块鸡汤面</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E4%B8%BB%E9%A3%9F/%E7%82%B8%E9%B8%A1%E8%85%BF%E6%97%B6%E8%94%AC%E9%9D%A2.md">炸鸡腿时蔬面</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E4%B8%BB%E9%A3%9F/%E7%89%B9%E8%89%B2%E9%B8%A1%E6%B1%A4%E9%A6%84%E9%A5%A8.md">特色鸡汤馄饨</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E4%B8%BB%E9%A3%9F/%E7%95%AA%E8%8C%84%E9%B8%A1%E8%9B%8B%E9%9D%A2.md">番茄鸡蛋面</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E4%B8%BB%E9%A3%9F/%E7%A0%82%E9%94%85%E8%8D%A0%E8%8F%9C%E9%B2%9C%E8%82%89%E9%A6%84%E9%A5%A8.md">砂锅荠菜鲜肉馄饨</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E4%B8%BB%E9%A3%9F/%E7%B1%B3%E9%A5%AD.md">米饭</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E4%B8%BB%E9%A3%9F/%E7%B4%A0%E9%9D%A2.md">素面</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E4%B8%BB%E9%A3%9F/%E8%80%81%E9%B8%A1%E6%89%AC%E7%B1%B3%E9%9D%A2.md">老鸡扬米面</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E4%B8%BB%E9%A3%9F/%E8%82%A5%E8%A5%BF%E8%80%81%E6%AF%8D%E9%B8%A1%E6%B1%A4%E9%9D%A2.md">肥西老母鸡汤面</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E4%B8%BB%E9%A3%9F/%E9%9B%AA%E8%8F%9C%E8%82%89%E4%B8%9D%E9%9D%A2.md">雪菜肉丝面</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E4%B8%BB%E9%A3%9F/%E9%A6%99%E8%8F%87%E9%B8%A1%E6%B1%A4%E9%9D%A2.md">香菇鸡汤面</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E4%B8%BB%E9%A3%9F/%E9%A6%99%E8%BE%A3%E7%89%9B%E8%82%89%E9%9D%A2.md">香辣牛肉面</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E4%B8%BB%E9%A3%9F/%E9%A6%99%E8%BE%A3%E9%B8%A1%E4%B8%81%E6%8B%8C%E9%9D%A2.md">香辣鸡丁拌面</a></li>
 </ul>
-<h1 id="凉拌"><a href="#凉拌" class="headerlink" title="凉拌"></a><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/tree/main/凉拌">凉拌</a></h1><ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/凉拌/凉拌莴笋丝.md">凉拌莴笋丝</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/凉拌/口水鸡.md">口水鸡</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/凉拌/柠檬凤爪.md">柠檬凤爪</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/凉拌/西芹花生米.md">西芹花生米</a></li>
+<h1><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/tree/main/%E5%87%89%E6%8B%8C">凉拌</a></h1>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E5%87%89%E6%8B%8C/%E5%87%89%E6%8B%8C%E8%8E%B4%E7%AC%8B%E4%B8%9D.md">凉拌莴笋丝</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E5%87%89%E6%8B%8C/%E5%8F%A3%E6%B0%B4%E9%B8%A1.md">口水鸡</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E5%87%89%E6%8B%8C/%E6%9F%A0%E6%AA%AC%E5%87%A4%E7%88%AA.md">柠檬凤爪</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E5%87%89%E6%8B%8C/%E8%A5%BF%E8%8A%B9%E8%8A%B1%E7%94%9F%E7%B1%B3.md">西芹花生米</a></li>
 </ul>
-<h1 id="卤菜"><a href="#卤菜" class="headerlink" title="卤菜"></a><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/tree/main/卤菜">卤菜</a></h1><ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/卤菜/卤大排.md">卤大排</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/卤菜/卤方干.md">卤方干</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/卤菜/卤翅根.md">卤翅根</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/卤菜/卤鸡爪.md">卤鸡爪</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/卤菜/卤鸡腿.md">卤鸡腿</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/卤菜/嗨嗨桶（红油串串）.md">嗨嗨桶（红油串串）</a></li>
+<h1><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/tree/main/%E5%8D%A4%E8%8F%9C">卤菜</a></h1>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E5%8D%A4%E8%8F%9C/%E5%8D%A4%E5%A4%A7%E6%8E%92.md">卤大排</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E5%8D%A4%E8%8F%9C/%E5%8D%A4%E6%96%B9%E5%B9%B2.md">卤方干</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E5%8D%A4%E8%8F%9C/%E5%8D%A4%E7%BF%85%E6%A0%B9.md">卤翅根</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E5%8D%A4%E8%8F%9C/%E5%8D%A4%E9%B8%A1%E7%88%AA.md">卤鸡爪</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E5%8D%A4%E8%8F%9C/%E5%8D%A4%E9%B8%A1%E8%85%BF.md">卤鸡腿</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E5%8D%A4%E8%8F%9C/%E5%97%A8%E5%97%A8%E6%A1%B6%EF%BC%88%E7%BA%A2%E6%B2%B9%E4%B8%B2%E4%B8%B2%EF%BC%89.md">嗨嗨桶（红油串串）</a></li>
 </ul>
-<h1 id="早餐"><a href="#早餐" class="headerlink" title="早餐"></a><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/tree/main/早餐">早餐</a></h1><ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/早餐/包子.md">包子</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/早餐/小米南瓜粥.md">小米南瓜粥</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/早餐/手工春卷.md">手工春卷</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/早餐/手工烧麦.md">手工烧麦</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/早餐/水煮蛋.md">水煮蛋</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/早餐/牛肉盒.md">牛肉盒</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/早餐/现炸大油条.md">现炸大油条</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/早餐/现熬豆粥.md">现熬豆粥</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/早餐/白米粥.md">白米粥</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/早餐/粢饭糕.md">粢饭糕</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/早餐/花卷.md">花卷</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/早餐/茶叶蛋.md">茶叶蛋</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/早餐/荠菜鲜肉蒸饺.md">荠菜鲜肉蒸饺</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/早餐/蛋饼.md">蛋饼</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/早餐/赤豆糊元宵.md">赤豆糊元宵</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/早餐/酥皮萝卜丝馅饼.md">酥皮萝卜丝馅饼</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/早餐/饭团.md">饭团</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/早餐/馒头.md">馒头</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/早餐/香酥牛肉饼.md">香酥牛肉饼</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/早餐/鸡汁汤包.md">鸡汁汤包</a></li>
+<h1><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/tree/main/%E6%97%A9%E9%A4%90">早餐</a></h1>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E6%97%A9%E9%A4%90/%E5%8C%85%E5%AD%90.md">包子</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E6%97%A9%E9%A4%90/%E5%B0%8F%E7%B1%B3%E5%8D%97%E7%93%9C%E7%B2%A5.md">小米南瓜粥</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E6%97%A9%E9%A4%90/%E6%89%8B%E5%B7%A5%E6%98%A5%E5%8D%B7.md">手工春卷</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E6%97%A9%E9%A4%90/%E6%89%8B%E5%B7%A5%E7%83%A7%E9%BA%A6.md">手工烧麦</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E6%97%A9%E9%A4%90/%E6%B0%B4%E7%85%AE%E8%9B%8B.md">水煮蛋</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E6%97%A9%E9%A4%90/%E7%89%9B%E8%82%89%E7%9B%92.md">牛肉盒</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E6%97%A9%E9%A4%90/%E7%8E%B0%E7%82%B8%E5%A4%A7%E6%B2%B9%E6%9D%A1.md">现炸大油条</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E6%97%A9%E9%A4%90/%E7%8E%B0%E7%86%AC%E8%B1%86%E7%B2%A5.md">现熬豆粥</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E6%97%A9%E9%A4%90/%E7%99%BD%E7%B1%B3%E7%B2%A5.md">白米粥</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E6%97%A9%E9%A4%90/%E7%B2%A2%E9%A5%AD%E7%B3%95.md">粢饭糕</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E6%97%A9%E9%A4%90/%E8%8A%B1%E5%8D%B7.md">花卷</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E6%97%A9%E9%A4%90/%E8%8C%B6%E5%8F%B6%E8%9B%8B.md">茶叶蛋</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E6%97%A9%E9%A4%90/%E8%8D%A0%E8%8F%9C%E9%B2%9C%E8%82%89%E8%92%B8%E9%A5%BA.md">荠菜鲜肉蒸饺</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E6%97%A9%E9%A4%90/%E8%9B%8B%E9%A5%BC.md">蛋饼</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E6%97%A9%E9%A4%90/%E8%B5%A4%E8%B1%86%E7%B3%8A%E5%85%83%E5%AE%B5.md">赤豆糊元宵</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E6%97%A9%E9%A4%90/%E9%85%A5%E7%9A%AE%E8%90%9D%E5%8D%9C%E4%B8%9D%E9%A6%85%E9%A5%BC.md">酥皮萝卜丝馅饼</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E6%97%A9%E9%A4%90/%E9%A5%AD%E5%9B%A2.md">饭团</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E6%97%A9%E9%A4%90/%E9%A6%92%E5%A4%B4.md">馒头</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E6%97%A9%E9%A4%90/%E9%A6%99%E9%85%A5%E7%89%9B%E8%82%89%E9%A5%BC.md">香酥牛肉饼</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E6%97%A9%E9%A4%90/%E9%B8%A1%E6%B1%81%E6%B1%A4%E5%8C%85.md">鸡汁汤包</a></li>
 </ul>
-<h1 id="汤"><a href="#汤" class="headerlink" title="汤"></a><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/tree/main/汤">汤</a></h1><ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/汤/竹荪鹿茸菇鸡汤.md">竹荪鹿茸菇鸡汤</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/汤/老鸡汤.md">老鸡汤</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/汤/肥西老母鸡汤（单品）.md">肥西老母鸡汤（单品）</a></li>
+<h1><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/tree/main/%E6%B1%A4">汤</a></h1>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E6%B1%A4/%E7%AB%B9%E8%8D%AA%E9%B9%BF%E8%8C%B8%E8%8F%87%E9%B8%A1%E6%B1%A4.md">竹荪鹿茸菇鸡汤</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E6%B1%A4/%E8%80%81%E9%B8%A1%E6%B1%A4.md">老鸡汤</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E6%B1%A4/%E8%82%A5%E8%A5%BF%E8%80%81%E6%AF%8D%E9%B8%A1%E6%B1%A4%EF%BC%88%E5%8D%95%E5%93%81%EF%BC%89.md">肥西老母鸡汤（单品）</a></li>
 </ul>
-<h1 id="炒菜"><a href="#炒菜" class="headerlink" title="炒菜"></a><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/tree/main/炒菜">炒菜</a></h1><ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/什锦蛋炒饭.md">什锦蛋炒饭</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/农家小炒肉（玉耳）.md">农家小炒肉（玉耳）</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/农家小炒肉（鸡蛋干）.md">农家小炒肉（鸡蛋干）</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/剁椒木耳炒鸡蛋.md">剁椒木耳炒鸡蛋</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/外婆菜炒鸡蛋.md">外婆菜炒鸡蛋</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/宫保鸡丁.md">宫保鸡丁</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/家常土豆片.md">家常土豆片</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/家常小炒.md">家常小炒</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/小炒河虾.md">小炒河虾</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/小炒花菜.md">小炒花菜</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/小炒面筋.md">小炒面筋</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/小炒香干.md">小炒香干</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/小炒鸡丁.md">小炒鸡丁</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/小炒黄牛肉.md">小炒黄牛肉</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/毛豆烧土鸡.md">毛豆烧土鸡</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/油渣大白菜.md">油渣大白菜</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/清炒春菜.md">清炒春菜</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/清炒毛白菜.md">清炒毛白菜</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/清炒油麦菜.md">清炒油麦菜</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/清炒莴笋片.md">清炒莴笋片</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/清炒菜心.md">清炒菜心</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/清炒西兰花.md">清炒西兰花</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/清炒青菜.md">清炒青菜</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/生炒上海青.md">生炒上海青</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/笋子烧肉.md">笋子烧肉</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/笋子鸡丁盖饭.md">笋子鸡丁盖饭</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/糖醋排骨.md">糖醋排骨</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/红烧茄子.md">红烧茄子</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/肥肠鸡.md">肥肠鸡</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/胡萝卜炒木耳.md">胡萝卜炒木耳</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/胡萝卜炒肉片.md">胡萝卜炒肉片</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/胡萝卜炒鸡蛋.md">胡萝卜炒鸡蛋</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/芋儿鸡.md">芋儿鸡</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/芹菜炒香干.md">芹菜炒香干</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/芹菜香干炒肉丝.md">芹菜香干炒肉丝</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/莴笋丝炒鸡蛋.md">莴笋丝炒鸡蛋</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/菠萝咕咾肉.md">菠萝咕咾肉</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/菠萝咕咾肉时蔬饭.md">菠萝咕咾肉时蔬饭</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/蒜泥菠菜.md">蒜泥菠菜</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/蚕豆炒鸡蛋.md">蚕豆炒鸡蛋</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/西红柿炒鸡蛋.md">西红柿炒鸡蛋</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/贵州风味辣子鸡.md">贵州风味辣子鸡</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/酸辣土豆丝.md">酸辣土豆丝</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/酸辣海带丝.md">酸辣海带丝</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/青椒炒豆芽.md">青椒炒豆芽</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/青椒炒鸡蛋.md">青椒炒鸡蛋</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/香椿炒鸡蛋.md">香椿炒鸡蛋</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/鱼香肉丝.md">鱼香肉丝</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炒菜/鱼香肉丝盖饭.md">鱼香肉丝盖饭</a></li>
+<h1><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/tree/main/%E7%82%92%E8%8F%9C">炒菜</a></h1>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E4%BB%80%E9%94%A6%E8%9B%8B%E7%82%92%E9%A5%AD.md">什锦蛋炒饭</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E5%86%9C%E5%AE%B6%E5%B0%8F%E7%82%92%E8%82%89%EF%BC%88%E7%8E%89%E8%80%B3%EF%BC%89.md">农家小炒肉（玉耳）</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E5%86%9C%E5%AE%B6%E5%B0%8F%E7%82%92%E8%82%89%EF%BC%88%E9%B8%A1%E8%9B%8B%E5%B9%B2%EF%BC%89.md">农家小炒肉（鸡蛋干）</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E5%89%81%E6%A4%92%E6%9C%A8%E8%80%B3%E7%82%92%E9%B8%A1%E8%9B%8B.md">剁椒木耳炒鸡蛋</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E5%A4%96%E5%A9%86%E8%8F%9C%E7%82%92%E9%B8%A1%E8%9B%8B.md">外婆菜炒鸡蛋</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E5%AE%AB%E4%BF%9D%E9%B8%A1%E4%B8%81.md">宫保鸡丁</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E5%AE%B6%E5%B8%B8%E5%9C%9F%E8%B1%86%E7%89%87.md">家常土豆片</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E5%AE%B6%E5%B8%B8%E5%B0%8F%E7%82%92.md">家常小炒</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E5%B0%8F%E7%82%92%E6%B2%B3%E8%99%BE.md">小炒河虾</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E5%B0%8F%E7%82%92%E8%8A%B1%E8%8F%9C.md">小炒花菜</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E5%B0%8F%E7%82%92%E9%9D%A2%E7%AD%8B.md">小炒面筋</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E5%B0%8F%E7%82%92%E9%A6%99%E5%B9%B2.md">小炒香干</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E5%B0%8F%E7%82%92%E9%B8%A1%E4%B8%81.md">小炒鸡丁</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E5%B0%8F%E7%82%92%E9%BB%84%E7%89%9B%E8%82%89.md">小炒黄牛肉</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E6%AF%9B%E8%B1%86%E7%83%A7%E5%9C%9F%E9%B8%A1.md">毛豆烧土鸡</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E6%B2%B9%E6%B8%A3%E5%A4%A7%E7%99%BD%E8%8F%9C.md">油渣大白菜</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E6%B8%85%E7%82%92%E6%98%A5%E8%8F%9C.md">清炒春菜</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E6%B8%85%E7%82%92%E6%AF%9B%E7%99%BD%E8%8F%9C.md">清炒毛白菜</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E6%B8%85%E7%82%92%E6%B2%B9%E9%BA%A6%E8%8F%9C.md">清炒油麦菜</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E6%B8%85%E7%82%92%E8%8E%B4%E7%AC%8B%E7%89%87.md">清炒莴笋片</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E6%B8%85%E7%82%92%E8%8F%9C%E5%BF%83.md">清炒菜心</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E6%B8%85%E7%82%92%E8%A5%BF%E5%85%B0%E8%8A%B1.md">清炒西兰花</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E6%B8%85%E7%82%92%E9%9D%92%E8%8F%9C.md">清炒青菜</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E7%94%9F%E7%82%92%E4%B8%8A%E6%B5%B7%E9%9D%92.md">生炒上海青</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E7%AC%8B%E5%AD%90%E7%83%A7%E8%82%89.md">笋子烧肉</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E7%AC%8B%E5%AD%90%E9%B8%A1%E4%B8%81%E7%9B%96%E9%A5%AD.md">笋子鸡丁盖饭</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E7%B3%96%E9%86%8B%E6%8E%92%E9%AA%A8.md">糖醋排骨</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E7%BA%A2%E7%83%A7%E8%8C%84%E5%AD%90.md">红烧茄子</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E8%82%A5%E8%82%A0%E9%B8%A1.md">肥肠鸡</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E8%83%A1%E8%90%9D%E5%8D%9C%E7%82%92%E6%9C%A8%E8%80%B3.md">胡萝卜炒木耳</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E8%83%A1%E8%90%9D%E5%8D%9C%E7%82%92%E8%82%89%E7%89%87.md">胡萝卜炒肉片</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E8%83%A1%E8%90%9D%E5%8D%9C%E7%82%92%E9%B8%A1%E8%9B%8B.md">胡萝卜炒鸡蛋</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E8%8A%8B%E5%84%BF%E9%B8%A1.md">芋儿鸡</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E8%8A%B9%E8%8F%9C%E7%82%92%E9%A6%99%E5%B9%B2.md">芹菜炒香干</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E8%8A%B9%E8%8F%9C%E9%A6%99%E5%B9%B2%E7%82%92%E8%82%89%E4%B8%9D.md">芹菜香干炒肉丝</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E8%8E%B4%E7%AC%8B%E4%B8%9D%E7%82%92%E9%B8%A1%E8%9B%8B.md">莴笋丝炒鸡蛋</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E8%8F%A0%E8%90%9D%E5%92%95%E5%92%BE%E8%82%89.md">菠萝咕咾肉</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E8%8F%A0%E8%90%9D%E5%92%95%E5%92%BE%E8%82%89%E6%97%B6%E8%94%AC%E9%A5%AD.md">菠萝咕咾肉时蔬饭</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E8%92%9C%E6%B3%A5%E8%8F%A0%E8%8F%9C.md">蒜泥菠菜</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E8%9A%95%E8%B1%86%E7%82%92%E9%B8%A1%E8%9B%8B.md">蚕豆炒鸡蛋</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E8%A5%BF%E7%BA%A2%E6%9F%BF%E7%82%92%E9%B8%A1%E8%9B%8B.md">西红柿炒鸡蛋</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E8%B4%B5%E5%B7%9E%E9%A3%8E%E5%91%B3%E8%BE%A3%E5%AD%90%E9%B8%A1.md">贵州风味辣子鸡</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E9%85%B8%E8%BE%A3%E5%9C%9F%E8%B1%86%E4%B8%9D.md">酸辣土豆丝</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E9%85%B8%E8%BE%A3%E6%B5%B7%E5%B8%A6%E4%B8%9D.md">酸辣海带丝</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E9%9D%92%E6%A4%92%E7%82%92%E8%B1%86%E8%8A%BD.md">青椒炒豆芽</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E9%9D%92%E6%A4%92%E7%82%92%E9%B8%A1%E8%9B%8B.md">青椒炒鸡蛋</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E9%A6%99%E6%A4%BF%E7%82%92%E9%B8%A1%E8%9B%8B.md">香椿炒鸡蛋</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E9%B1%BC%E9%A6%99%E8%82%89%E4%B8%9D.md">鱼香肉丝</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%92%E8%8F%9C/%E9%B1%BC%E9%A6%99%E8%82%89%E4%B8%9D%E7%9B%96%E9%A5%AD.md">鱼香肉丝盖饭</a></li>
 </ul>
-<h1 id="炖菜"><a href="#炖菜" class="headerlink" title="炖菜"></a><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/tree/main/炖菜">炖菜</a></h1><ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炖菜/土豆牛腩.md">土豆牛腩</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炖菜/梅干菜凤爪翅.md">梅干菜凤爪翅</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炖菜/白菜炖豆腐.md">白菜炖豆腐</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炖菜/红烧鱼块.md">红烧鱼块</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炖菜/香辣鸡杂.md">香辣鸡杂</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炖菜/鸡血汤.md">鸡血汤</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炖菜/麻婆豆腐.md">麻婆豆腐</a></li>
+<h1><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/tree/main/%E7%82%96%E8%8F%9C">炖菜</a></h1>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%96%E8%8F%9C/%E5%9C%9F%E8%B1%86%E7%89%9B%E8%85%A9.md">土豆牛腩</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%96%E8%8F%9C/%E6%A2%85%E5%B9%B2%E8%8F%9C%E5%87%A4%E7%88%AA%E7%BF%85.md">梅干菜凤爪翅</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%96%E8%8F%9C/%E7%99%BD%E8%8F%9C%E7%82%96%E8%B1%86%E8%85%90.md">白菜炖豆腐</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%96%E8%8F%9C/%E7%BA%A2%E7%83%A7%E9%B1%BC%E5%9D%97.md">红烧鱼块</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%96%E8%8F%9C/%E9%A6%99%E8%BE%A3%E9%B8%A1%E6%9D%82.md">香辣鸡杂</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%96%E8%8F%9C/%E9%B8%A1%E8%A1%80%E6%B1%A4.md">鸡血汤</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%96%E8%8F%9C/%E9%BA%BB%E5%A9%86%E8%B1%86%E8%85%90.md">麻婆豆腐</a></li>
 </ul>
-<h1 id="炸品"><a href="#炸品" class="headerlink" title="炸品"></a><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/tree/main/炸品">炸品</a></h1><ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炸品/傲椒风味翅尖.md">傲椒风味翅尖</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炸品/嗨嗨桶（炸物桶）.md">嗨嗨桶（炸物桶）</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炸品/心形鸡排.md">心形鸡排</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炸品/手枪大鸡腿.md">手枪大鸡腿</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炸品/棒棒虾.md">棒棒虾</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炸品/炸鸡排.md">炸鸡排</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炸品/炸鸡腿.md">炸鸡腿</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炸品/生炸大鸡腿.md">生炸大鸡腿</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炸品/香脆薯饼.md">香脆薯饼</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炸品/香芋地瓜丸.md">香芋地瓜丸</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炸品/香酥鸡米花.md">香酥鸡米花</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/炸品/鸡肉洋葱圈.md">鸡肉洋葱圈</a></li>
+<h1><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/tree/main/%E7%82%B8%E5%93%81">炸品</a></h1>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%B8%E5%93%81/%E5%82%B2%E6%A4%92%E9%A3%8E%E5%91%B3%E7%BF%85%E5%B0%96.md">傲椒风味翅尖</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%B8%E5%93%81/%E5%97%A8%E5%97%A8%E6%A1%B6%EF%BC%88%E7%82%B8%E7%89%A9%E6%A1%B6%EF%BC%89.md">嗨嗨桶（炸物桶）</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%B8%E5%93%81/%E5%BF%83%E5%BD%A2%E9%B8%A1%E6%8E%92.md">心形鸡排</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%B8%E5%93%81/%E6%89%8B%E6%9E%AA%E5%A4%A7%E9%B8%A1%E8%85%BF.md">手枪大鸡腿</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%B8%E5%93%81/%E6%A3%92%E6%A3%92%E8%99%BE.md">棒棒虾</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%B8%E5%93%81/%E7%82%B8%E9%B8%A1%E6%8E%92.md">炸鸡排</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%B8%E5%93%81/%E7%82%B8%E9%B8%A1%E8%85%BF.md">炸鸡腿</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%B8%E5%93%81/%E7%94%9F%E7%82%B8%E5%A4%A7%E9%B8%A1%E8%85%BF.md">生炸大鸡腿</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%B8%E5%93%81/%E9%A6%99%E8%84%86%E8%96%AF%E9%A5%BC.md">香脆薯饼</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%B8%E5%93%81/%E9%A6%99%E8%8A%8B%E5%9C%B0%E7%93%9C%E4%B8%B8.md">香芋地瓜丸</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%B8%E5%93%81/%E9%A6%99%E9%85%A5%E9%B8%A1%E7%B1%B3%E8%8A%B1.md">香酥鸡米花</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%82%B8%E5%93%81/%E9%B8%A1%E8%82%89%E6%B4%8B%E8%91%B1%E5%9C%88.md">鸡肉洋葱圈</a></li>
 </ul>
-<h1 id="烤类"><a href="#烤类" class="headerlink" title="烤类"></a><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/tree/main/烤类">烤类</a></h1><ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/烤类/烤肠.md">烤肠</a></li>
+<h1><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/tree/main/%E7%83%A4%E7%B1%BB">烤类</a></h1>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%83%A4%E7%B1%BB/%E7%83%A4%E8%82%A0.md">烤肠</a></li>
 </ul>
-<h1 id="烫菜"><a href="#烫菜" class="headerlink" title="烫菜"></a><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/tree/main/烫菜">烫菜</a></h1><ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/烫菜/浇汁西兰花.md">浇汁西兰花</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/烫菜/特色热干面.md">特色热干面</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/烫菜/菠菜蛋皮丝.md">菠菜蛋皮丝</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/烫菜/葱油拌面.md">葱油拌面</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/烫菜/葱油菜心.md">葱油菜心</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/烫菜/葱油菜苔.md">葱油菜苔</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/烫菜/香脆木耳.md">香脆木耳</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/烫菜/鸡汤娃娃菜.md">鸡汤娃娃菜</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/烫菜/麻辣鸡块.md">麻辣鸡块</a></li>
+<h1><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/tree/main/%E7%83%AB%E8%8F%9C">烫菜</a></h1>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%83%AB%E8%8F%9C/%E6%B5%87%E6%B1%81%E8%A5%BF%E5%85%B0%E8%8A%B1.md">浇汁西兰花</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%83%AB%E8%8F%9C/%E7%89%B9%E8%89%B2%E7%83%AD%E5%B9%B2%E9%9D%A2.md">特色热干面</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%83%AB%E8%8F%9C/%E8%8F%A0%E8%8F%9C%E8%9B%8B%E7%9A%AE%E4%B8%9D.md">菠菜蛋皮丝</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%83%AB%E8%8F%9C/%E8%91%B1%E6%B2%B9%E6%8B%8C%E9%9D%A2.md">葱油拌面</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%83%AB%E8%8F%9C/%E8%91%B1%E6%B2%B9%E8%8F%9C%E5%BF%83.md">葱油菜心</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%83%AB%E8%8F%9C/%E8%91%B1%E6%B2%B9%E8%8F%9C%E8%8B%94.md">葱油菜苔</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%83%AB%E8%8F%9C/%E9%A6%99%E8%84%86%E6%9C%A8%E8%80%B3.md">香脆木耳</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%83%AB%E8%8F%9C/%E9%B8%A1%E6%B1%A4%E5%A8%83%E5%A8%83%E8%8F%9C.md">鸡汤娃娃菜</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%83%AB%E8%8F%9C/%E9%BA%BB%E8%BE%A3%E9%B8%A1%E5%9D%97.md">麻辣鸡块</a></li>
 </ul>
-<h1 id="煮锅"><a href="#煮锅" class="headerlink" title="煮锅"></a><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/tree/main/煮锅">煮锅</a></h1><ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/煮锅/冒烤鸭.md">冒烤鸭</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/煮锅/嗨嗨锅（泡椒鸡米花米线）.md">嗨嗨锅（泡椒鸡米花米线）</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/煮锅/嗨嗨锅（番茄肥牛锅）.md">嗨嗨锅（番茄肥牛锅）</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/煮锅/嗨嗨锅（酸菜鱼米线）.md">嗨嗨锅（酸菜鱼米线）</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/煮锅/嗨嗨锅（鲜蔬锅）.md">嗨嗨锅（鲜蔬锅）</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/煮锅/金汤酸菜鱼.md">金汤酸菜鱼</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/煮锅/金汤酸菜鱼（大份）.md">金汤酸菜鱼（大份）</a></li>
+<h1><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/tree/main/%E7%85%AE%E9%94%85">煮锅</a></h1>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%85%AE%E9%94%85/%E5%86%92%E7%83%A4%E9%B8%AD.md">冒烤鸭</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%85%AE%E9%94%85/%E5%97%A8%E5%97%A8%E9%94%85%EF%BC%88%E6%B3%A1%E6%A4%92%E9%B8%A1%E7%B1%B3%E8%8A%B1%E7%B1%B3%E7%BA%BF%EF%BC%89.md">嗨嗨锅（泡椒鸡米花米线）</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%85%AE%E9%94%85/%E5%97%A8%E5%97%A8%E9%94%85%EF%BC%88%E7%95%AA%E8%8C%84%E8%82%A5%E7%89%9B%E9%94%85%EF%BC%89.md">嗨嗨锅（番茄肥牛锅）</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%85%AE%E9%94%85/%E5%97%A8%E5%97%A8%E9%94%85%EF%BC%88%E9%85%B8%E8%8F%9C%E9%B1%BC%E7%B1%B3%E7%BA%BF%EF%BC%89.md">嗨嗨锅（酸菜鱼米线）</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%85%AE%E9%94%85/%E5%97%A8%E5%97%A8%E9%94%85%EF%BC%88%E9%B2%9C%E8%94%AC%E9%94%85%EF%BC%89.md">嗨嗨锅（鲜蔬锅）</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%85%AE%E9%94%85/%E9%87%91%E6%B1%A4%E9%85%B8%E8%8F%9C%E9%B1%BC.md">金汤酸菜鱼</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%85%AE%E9%94%85/%E9%87%91%E6%B1%A4%E9%85%B8%E8%8F%9C%E9%B1%BC%EF%BC%88%E5%A4%A7%E4%BB%BD%EF%BC%89.md">金汤酸菜鱼（大份）</a></li>
 </ul>
-<h1 id="砂锅菜"><a href="#砂锅菜" class="headerlink" title="砂锅菜"></a><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/tree/main/砂锅菜">砂锅菜</a></h1><ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/砂锅菜/砂锅三鲜豆腐.md">砂锅三鲜豆腐</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/砂锅菜/砂锅原味鸡汤米线.md">砂锅原味鸡汤米线</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/砂锅菜/砂锅木瓜.md">砂锅木瓜</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/砂锅菜/砂锅泡椒鸡米花米线.md">砂锅泡椒鸡米花米线</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/砂锅菜/砂锅牛杂煲.md">砂锅牛杂煲</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/砂锅菜/砂锅番茄米线.md">砂锅番茄米线</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/砂锅菜/砂锅盐焗鸡.md">砂锅盐焗鸡</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/砂锅菜/砂锅腐竹.md">砂锅腐竹</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/砂锅菜/砂锅蒜蓉粉丝虾.md">砂锅蒜蓉粉丝虾</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/砂锅菜/砂锅酸菜鱼.md">砂锅酸菜鱼</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/砂锅菜/酸菜肥肠煲.md">酸菜肥肠煲</a></li>
+<h1><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/tree/main/%E7%A0%82%E9%94%85%E8%8F%9C">砂锅菜</a></h1>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%A0%82%E9%94%85%E8%8F%9C/%E7%A0%82%E9%94%85%E4%B8%89%E9%B2%9C%E8%B1%86%E8%85%90.md">砂锅三鲜豆腐</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%A0%82%E9%94%85%E8%8F%9C/%E7%A0%82%E9%94%85%E5%8E%9F%E5%91%B3%E9%B8%A1%E6%B1%A4%E7%B1%B3%E7%BA%BF.md">砂锅原味鸡汤米线</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%A0%82%E9%94%85%E8%8F%9C/%E7%A0%82%E9%94%85%E6%9C%A8%E7%93%9C.md">砂锅木瓜</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%A0%82%E9%94%85%E8%8F%9C/%E7%A0%82%E9%94%85%E6%B3%A1%E6%A4%92%E9%B8%A1%E7%B1%B3%E8%8A%B1%E7%B1%B3%E7%BA%BF.md">砂锅泡椒鸡米花米线</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%A0%82%E9%94%85%E8%8F%9C/%E7%A0%82%E9%94%85%E7%89%9B%E6%9D%82%E7%85%B2.md">砂锅牛杂煲</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%A0%82%E9%94%85%E8%8F%9C/%E7%A0%82%E9%94%85%E7%95%AA%E8%8C%84%E7%B1%B3%E7%BA%BF.md">砂锅番茄米线</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%A0%82%E9%94%85%E8%8F%9C/%E7%A0%82%E9%94%85%E7%9B%90%E7%84%97%E9%B8%A1.md">砂锅盐焗鸡</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%A0%82%E9%94%85%E8%8F%9C/%E7%A0%82%E9%94%85%E8%85%90%E7%AB%B9.md">砂锅腐竹</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%A0%82%E9%94%85%E8%8F%9C/%E7%A0%82%E9%94%85%E8%92%9C%E8%93%89%E7%B2%89%E4%B8%9D%E8%99%BE.md">砂锅蒜蓉粉丝虾</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%A0%82%E9%94%85%E8%8F%9C/%E7%A0%82%E9%94%85%E9%85%B8%E8%8F%9C%E9%B1%BC.md">砂锅酸菜鱼</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E7%A0%82%E9%94%85%E8%8F%9C/%E9%85%B8%E8%8F%9C%E8%82%A5%E8%82%A0%E7%85%B2.md">酸菜肥肠煲</a></li>
 </ul>
-<h1 id="蒸菜"><a href="#蒸菜" class="headerlink" title="蒸菜"></a><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/tree/main/蒸菜">蒸菜</a></h1><ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/蒸菜/三色虾仁.md">三色虾仁</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/蒸菜/农家蒸蛋.md">农家蒸蛋</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/蒸菜/凤爪蒸豆米.md">凤爪蒸豆米</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/蒸菜/剁椒鱼头.md">剁椒鱼头</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/蒸菜/奥尔良鸡翅.md">奥尔良鸡翅</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/蒸菜/松糕.md">松糕</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/蒸菜/梅菜扣肉.md">梅菜扣肉</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/蒸菜/活珠子.md">活珠子</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/蒸菜/白切鸡.md">白切鸡</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/蒸菜/秘汁卤肉饭.md">秘汁卤肉饭</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/蒸菜/竹笋蒸鸡翅.md">竹笋蒸鸡翅</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/蒸菜/粉蒸肉.md">粉蒸肉</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/蒸菜/粗粮盒.md">粗粮盒</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/蒸菜/肉饼蒸蛋.md">肉饼蒸蛋</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/蒸菜/胡萝卜牛肉.md">胡萝卜牛肉</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/蒸菜/葱油鸡.md">葱油鸡</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/蒸菜/蒜蓉娃娃菜.md">蒜蓉娃娃菜</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/蒸菜/蒜蓉粉丝虾.md">蒜蓉粉丝虾</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/蒸菜/虾仁蒸鸡蛋.md">虾仁蒸鸡蛋</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/蒸菜/蜜汁南瓜.md">蜜汁南瓜</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/蒸菜/酱椒蒜香片片鱼.md">酱椒蒜香片片鱼</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/蒸菜/酱蒸白干.md">酱蒸白干</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/蒸菜/酱蒸豆腐.md">酱蒸豆腐</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/蒸菜/酱香小河虾.md">酱香小河虾</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/蒸菜/风干牛肉蒸白干.md">风干牛肉蒸白干</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/蒸菜/香肠蒸豆米.md">香肠蒸豆米</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/蒸菜/香芋蒸排骨.md">香芋蒸排骨</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/蒸菜/香辣血旺.md">香辣血旺</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/蒸菜/鸡汁辣鱼.md">鸡汁辣鱼</a></li>
+<h1><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/tree/main/%E8%92%B8%E8%8F%9C">蒸菜</a></h1>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E8%92%B8%E8%8F%9C/%E4%B8%89%E8%89%B2%E8%99%BE%E4%BB%81.md">三色虾仁</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E8%92%B8%E8%8F%9C/%E5%86%9C%E5%AE%B6%E8%92%B8%E8%9B%8B.md">农家蒸蛋</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E8%92%B8%E8%8F%9C/%E5%87%A4%E7%88%AA%E8%92%B8%E8%B1%86%E7%B1%B3.md">凤爪蒸豆米</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E8%92%B8%E8%8F%9C/%E5%89%81%E6%A4%92%E9%B1%BC%E5%A4%B4.md">剁椒鱼头</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E8%92%B8%E8%8F%9C/%E5%A5%A5%E5%B0%94%E8%89%AF%E9%B8%A1%E7%BF%85.md">奥尔良鸡翅</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E8%92%B8%E8%8F%9C/%E6%9D%BE%E7%B3%95.md">松糕</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E8%92%B8%E8%8F%9C/%E6%A2%85%E8%8F%9C%E6%89%A3%E8%82%89.md">梅菜扣肉</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E8%92%B8%E8%8F%9C/%E6%B4%BB%E7%8F%A0%E5%AD%90.md">活珠子</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E8%92%B8%E8%8F%9C/%E7%99%BD%E5%88%87%E9%B8%A1.md">白切鸡</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E8%92%B8%E8%8F%9C/%E7%A7%98%E6%B1%81%E5%8D%A4%E8%82%89%E9%A5%AD.md">秘汁卤肉饭</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E8%92%B8%E8%8F%9C/%E7%AB%B9%E7%AC%8B%E8%92%B8%E9%B8%A1%E7%BF%85.md">竹笋蒸鸡翅</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E8%92%B8%E8%8F%9C/%E7%B2%89%E8%92%B8%E8%82%89.md">粉蒸肉</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E8%92%B8%E8%8F%9C/%E7%B2%97%E7%B2%AE%E7%9B%92.md">粗粮盒</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E8%92%B8%E8%8F%9C/%E8%82%89%E9%A5%BC%E8%92%B8%E8%9B%8B.md">肉饼蒸蛋</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E8%92%B8%E8%8F%9C/%E8%83%A1%E8%90%9D%E5%8D%9C%E7%89%9B%E8%82%89.md">胡萝卜牛肉</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E8%92%B8%E8%8F%9C/%E8%91%B1%E6%B2%B9%E9%B8%A1.md">葱油鸡</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E8%92%B8%E8%8F%9C/%E8%92%9C%E8%93%89%E5%A8%83%E5%A8%83%E8%8F%9C.md">蒜蓉娃娃菜</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E8%92%B8%E8%8F%9C/%E8%92%9C%E8%93%89%E7%B2%89%E4%B8%9D%E8%99%BE.md">蒜蓉粉丝虾</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E8%92%B8%E8%8F%9C/%E8%99%BE%E4%BB%81%E8%92%B8%E9%B8%A1%E8%9B%8B.md">虾仁蒸鸡蛋</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E8%92%B8%E8%8F%9C/%E8%9C%9C%E6%B1%81%E5%8D%97%E7%93%9C.md">蜜汁南瓜</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E8%92%B8%E8%8F%9C/%E9%85%B1%E6%A4%92%E8%92%9C%E9%A6%99%E7%89%87%E7%89%87%E9%B1%BC.md">酱椒蒜香片片鱼</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E8%92%B8%E8%8F%9C/%E9%85%B1%E8%92%B8%E7%99%BD%E5%B9%B2.md">酱蒸白干</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E8%92%B8%E8%8F%9C/%E9%85%B1%E8%92%B8%E8%B1%86%E8%85%90.md">酱蒸豆腐</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E8%92%B8%E8%8F%9C/%E9%85%B1%E9%A6%99%E5%B0%8F%E6%B2%B3%E8%99%BE.md">酱香小河虾</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E8%92%B8%E8%8F%9C/%E9%A3%8E%E5%B9%B2%E7%89%9B%E8%82%89%E8%92%B8%E7%99%BD%E5%B9%B2.md">风干牛肉蒸白干</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E8%92%B8%E8%8F%9C/%E9%A6%99%E8%82%A0%E8%92%B8%E8%B1%86%E7%B1%B3.md">香肠蒸豆米</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E8%92%B8%E8%8F%9C/%E9%A6%99%E8%8A%8B%E8%92%B8%E6%8E%92%E9%AA%A8.md">香芋蒸排骨</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E8%92%B8%E8%8F%9C/%E9%A6%99%E8%BE%A3%E8%A1%80%E6%97%BA.md">香辣血旺</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E8%92%B8%E8%8F%9C/%E9%B8%A1%E6%B1%81%E8%BE%A3%E9%B1%BC.md">鸡汁辣鱼</a></li>
 </ul>
-<h1 id="配料"><a href="#配料" class="headerlink" title="配料"></a><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/tree/main/配料">配料</a></h1><ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/配料/三鲜豆腐汤料.md">三鲜豆腐汤料</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/配料/剁椒酱.md">剁椒酱</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/配料/剁椒鱼头料.md">剁椒鱼头料</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/配料/家常小炒料.md">家常小炒料</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/配料/小炒肉调味汁.md">小炒肉调味汁</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/配料/小炒肉调料.md">小炒肉调料</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/配料/油焖茄子料.md">油焖茄子料</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/配料/炒菜基料.md">炒菜基料</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/配料/肥肠鸡酱料.md">肥肠鸡酱料</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/配料/血旺料.md">血旺料</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/配料/调味料（小炒鸡丁）.md">调味料（小炒鸡丁）</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/配料/酱蒸白干料.md">酱蒸白干料</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/配料/风干牛肉酱料.md">风干牛肉酱料</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/配料/鸡杂料.md">鸡杂料</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/配料/鸡汁辣鱼料.md">鸡汁辣鱼料</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/配料/鸡油料.md">鸡油料</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/配料/鸡翅调料.md">鸡翅调料</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/配料/麻婆豆腐料.md">麻婆豆腐料</a></li>
+<h1><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/tree/main/%E9%85%8D%E6%96%99">配料</a></h1>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E9%85%8D%E6%96%99/%E4%B8%89%E9%B2%9C%E8%B1%86%E8%85%90%E6%B1%A4%E6%96%99.md">三鲜豆腐汤料</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E9%85%8D%E6%96%99/%E5%89%81%E6%A4%92%E9%85%B1.md">剁椒酱</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E9%85%8D%E6%96%99/%E5%89%81%E6%A4%92%E9%B1%BC%E5%A4%B4%E6%96%99.md">剁椒鱼头料</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E9%85%8D%E6%96%99/%E5%AE%B6%E5%B8%B8%E5%B0%8F%E7%82%92%E6%96%99.md">家常小炒料</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E9%85%8D%E6%96%99/%E5%B0%8F%E7%82%92%E8%82%89%E8%B0%83%E5%91%B3%E6%B1%81.md">小炒肉调味汁</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E9%85%8D%E6%96%99/%E5%B0%8F%E7%82%92%E8%82%89%E8%B0%83%E6%96%99.md">小炒肉调料</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E9%85%8D%E6%96%99/%E6%B2%B9%E7%84%96%E8%8C%84%E5%AD%90%E6%96%99.md">油焖茄子料</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E9%85%8D%E6%96%99/%E7%82%92%E8%8F%9C%E5%9F%BA%E6%96%99.md">炒菜基料</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E9%85%8D%E6%96%99/%E8%82%A5%E8%82%A0%E9%B8%A1%E9%85%B1%E6%96%99.md">肥肠鸡酱料</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E9%85%8D%E6%96%99/%E8%A1%80%E6%97%BA%E6%96%99.md">血旺料</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E9%85%8D%E6%96%99/%E8%B0%83%E5%91%B3%E6%96%99%EF%BC%88%E5%B0%8F%E7%82%92%E9%B8%A1%E4%B8%81%EF%BC%89.md">调味料（小炒鸡丁）</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E9%85%8D%E6%96%99/%E9%85%B1%E8%92%B8%E7%99%BD%E5%B9%B2%E6%96%99.md">酱蒸白干料</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E9%85%8D%E6%96%99/%E9%A3%8E%E5%B9%B2%E7%89%9B%E8%82%89%E9%85%B1%E6%96%99.md">风干牛肉酱料</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E9%85%8D%E6%96%99/%E9%B8%A1%E6%9D%82%E6%96%99.md">鸡杂料</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E9%85%8D%E6%96%99/%E9%B8%A1%E6%B1%81%E8%BE%A3%E9%B1%BC%E6%96%99.md">鸡汁辣鱼料</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E9%85%8D%E6%96%99/%E9%B8%A1%E6%B2%B9%E6%96%99.md">鸡油料</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E9%85%8D%E6%96%99/%E9%B8%A1%E7%BF%85%E8%B0%83%E6%96%99.md">鸡翅调料</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E9%85%8D%E6%96%99/%E9%BA%BB%E5%A9%86%E8%B1%86%E8%85%90%E6%96%99.md">麻婆豆腐料</a></li>
 </ul>
-<h1 id="饮品"><a href="#饮品" class="headerlink" title="饮品"></a><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/tree/main/饮品">饮品</a></h1><ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/饮品/原味豆浆.md">原味豆浆</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/饮品/热奶茶.md">热奶茶</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/饮品/苹果山楂红茶.md">苹果山楂红茶</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/饮品/鸡笼香柠檬茶.md">鸡笼香柠檬茶</a></li>
+<h1><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/tree/main/%E9%A5%AE%E5%93%81">饮品</a></h1>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E9%A5%AE%E5%93%81/%E5%8E%9F%E5%91%B3%E8%B1%86%E6%B5%86.md">原味豆浆</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E9%A5%AE%E5%93%81/%E7%83%AD%E5%A5%B6%E8%8C%B6.md">热奶茶</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E9%A5%AE%E5%93%81/%E8%8B%B9%E6%9E%9C%E5%B1%B1%E6%A5%82%E7%BA%A2%E8%8C%B6.md">苹果山楂红茶</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CMander02/CookLikeHOC/edit/main/%E9%A5%AE%E5%93%81/%E9%B8%A1%E7%AC%BC%E9%A6%99%E6%9F%A0%E6%AA%AC%E8%8C%B6.md">鸡笼香柠檬茶</a></li>
 </ul>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">CMander</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/posts/52616.html">http://example.com/posts/52616.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">无声之地</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%BE%8E%E9%A3%9F/">美食</a><a class="post-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/">教程</a></div><div class="post_share"><div class="social-share" data-image="/pic/lxj_banner.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/37262.html" title="BU-EC526-Note"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">BU-EC526-Note</div></div></a></div><div class="next-post pull-right"><a href="/posts/59822.html" title="机器学习实战0-斗蛐蛐预测"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">机器学习实战0-斗蛐蛐预测</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">CMander</div><div class="author-info__description">于无声处且行吟</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/CMander02" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://space.bilibili.com/396895143" target="_blank" title="BiliBili"><i class="fab fa-bilibili" style="color: #fb7299;"></i></a><a class="social-icon" href="https://cmander02.github.io/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss" style="color: #eb6c22;"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%BB%E9%A3%9F"><span class="toc-number">2.</span> <span class="toc-text">主食</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%89%E6%8B%8C"><span class="toc-number">3.</span> <span class="toc-text">凉拌</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%A4%E8%8F%9C"><span class="toc-number">4.</span> <span class="toc-text">卤菜</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%97%A9%E9%A4%90"><span class="toc-number">5.</span> <span class="toc-text">早餐</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B1%A4"><span class="toc-number">6.</span> <span class="toc-text">汤</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%82%92%E8%8F%9C"><span class="toc-number">7.</span> <span class="toc-text">炒菜</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%82%96%E8%8F%9C"><span class="toc-number">8.</span> <span class="toc-text">炖菜</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%82%B8%E5%93%81"><span class="toc-number">9.</span> <span class="toc-text">炸品</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%83%A4%E7%B1%BB"><span class="toc-number">10.</span> <span class="toc-text">烤类</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%83%AB%E8%8F%9C"><span class="toc-number">11.</span> <span class="toc-text">烫菜</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%85%AE%E9%94%85"><span class="toc-number">12.</span> <span class="toc-text">煮锅</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A0%82%E9%94%85%E8%8F%9C"><span class="toc-number">13.</span> <span class="toc-text">砂锅菜</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%92%B8%E8%8F%9C"><span class="toc-number">14.</span> <span class="toc-text">蒸菜</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%85%8D%E6%96%99"><span class="toc-number">15.</span> <span class="toc-text">配料</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A5%AE%E5%93%81"><span class="toc-number">16.</span> <span class="toc-text">饮品</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/60190.html" title="笔记2">笔记2</a><time datetime="2024-05-15T14:04:00.000Z" title="发表于 2024-05-15 22:04:00">2024-05-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/65384.html" title="2024年5月11日波士顿极光"><img src="/pic/aurora_banner.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2024年5月11日波士顿极光"/></a><div class="content"><a class="title" href="/posts/65384.html" title="2024年5月11日波士顿极光">2024年5月11日波士顿极光</a><time datetime="2024-05-15T06:23:06.000Z" title="发表于 2024-05-15 14:23:06">2024-05-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/31001.html" title="Alist挂载网盘">Alist挂载网盘</a><time datetime="2024-04-22T05:15:11.000Z" title="发表于 2024-04-22 13:15:11">2024-04-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/37262.html" title="BU-EC526-Note">BU-EC526-Note</a><time datetime="2024-04-22T02:33:25.000Z" title="发表于 2024-04-22 10:33:25">2024-04-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/52616.html" title="老乡鸡菜谱"><img src="/pic/lxj_banner.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="老乡鸡菜谱"/></a><div class="content"><a class="title" href="/posts/52616.html" title="老乡鸡菜谱">老乡鸡菜谱</a><time datetime="2024-04-19T03:05:24.000Z" title="发表于 2024-04-19 11:05:24">2024-04-19</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By CMander</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.13.0"></script></div></div></body></html>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">CMander</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/posts/52616.html">http://example.com/posts/52616.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">无声之地</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%BE%8E%E9%A3%9F/">美食</a><a class="post-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/">教程</a></div><div class="post_share"><div class="social-share" data-image="/pic/lxj_banner.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/37262.html" title="BU-EC526-Note"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">BU-EC526-Note</div></div></a></div><div class="next-post pull-right"><a href="/posts/59822.html" title="机器学习实战0-斗蛐蛐预测"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">机器学习实战0-斗蛐蛐预测</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">CMander</div><div class="author-info__description">于无声处且行吟</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">20</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/CMander02" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://space.bilibili.com/396895143" target="_blank" title="BiliBili"><i class="fab fa-bilibili" style="color: #fb7299;"></i></a><a class="social-icon" href="https://cmander02.github.io/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss" style="color: #eb6c22;"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">主食</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">凉拌</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">卤菜</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">5.</span> <span class="toc-text">早餐</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">6.</span> <span class="toc-text">汤</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">7.</span> <span class="toc-text">炒菜</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">8.</span> <span class="toc-text">炖菜</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">9.</span> <span class="toc-text">炸品</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">10.</span> <span class="toc-text">烤类</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">11.</span> <span class="toc-text">烫菜</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">12.</span> <span class="toc-text">煮锅</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">13.</span> <span class="toc-text">砂锅菜</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">14.</span> <span class="toc-text">蒸菜</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">15.</span> <span class="toc-text">配料</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">16.</span> <span class="toc-text">饮品</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/35093.html" title="GPTo1 Jailbreak">GPTo1 Jailbreak</a><time datetime="2024-09-15T12:00:05.000Z" title="发表于 2024-09-15 20:00:05">2024-09-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/65346.html" title="Markdown测试">Markdown测试</a><time datetime="2024-09-08T06:26:27.000Z" title="发表于 2024-09-08 14:26:27">2024-09-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/60190.html" title="笔记2">笔记2</a><time datetime="2024-05-15T14:04:00.000Z" title="发表于 2024-05-15 22:04:00">2024-05-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/65384.html" title="2024年5月11日波士顿极光"><img src="/pic/aurora_banner.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2024年5月11日波士顿极光"/></a><div class="content"><a class="title" href="/posts/65384.html" title="2024年5月11日波士顿极光">2024年5月11日波士顿极光</a><time datetime="2024-05-15T06:23:06.000Z" title="发表于 2024-05-15 14:23:06">2024-05-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/31001.html" title="Alist挂载网盘">Alist挂载网盘</a><time datetime="2024-04-22T05:15:11.000Z" title="发表于 2024-04-22 13:15:11">2024-04-22</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By CMander</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.13.0"></script></div></div></body></html>
