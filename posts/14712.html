@@ -1,0 +1,292 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>动手学Agent（2）：吴恩达翻译Agent | 无声之地</title><meta name="author" content="CMander"><meta name="copyright" content="CMander"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前言 本文是动手学Agent系列的第二篇，对吴恩达老师的翻译Agent的笔记。 一些临时注释 ic: icecream https:&#x2F;&#x2F;github.com&#x2F;gruns&#x2F;icecream 代码结构 最重要的内容在.&#x2F;src&#x2F;translation_agent&#x2F;utils.py里面。 这里定义了整个translation_agent库，下面以伪代码形式重写其主函数： 12345678910# MAX">
+<meta property="og:type" content="article">
+<meta property="og:title" content="动手学Agent（2）：吴恩达翻译Agent">
+<meta property="og:url" content="http://example.com/posts/14712.html">
+<meta property="og:site_name" content="无声之地">
+<meta property="og:description" content="前言 本文是动手学Agent系列的第二篇，对吴恩达老师的翻译Agent的笔记。 一些临时注释 ic: icecream https:&#x2F;&#x2F;github.com&#x2F;gruns&#x2F;icecream 代码结构 最重要的内容在.&#x2F;src&#x2F;translation_agent&#x2F;utils.py里面。 这里定义了整个translation_agent库，下面以伪代码形式重写其主函数： 12345678910# MAX">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/avatar.png">
+<meta property="article:published_time" content="2024-09-22T02:50:45.000Z">
+<meta property="article:modified_time" content="2024-09-23T15:51:27.455Z">
+<meta property="article:author" content="CMander">
+<meta property="article:tag" content="agent">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/avatar.png"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="http://example.com/posts/14712.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":300},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '动手学Agent（2）：吴恩达翻译Agent',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-09-23 23:51:27'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="//at.alicdn.com/t/c/font_4519565_hnncukau55l.css"><meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="无声之地" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">19</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">23</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/notes/"><i class="fa-fw iconfont icon-5"></i><span> 笔记</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url('/pic/default_top.png')"><nav id="nav"><span id="blog-info"><a href="/" title="无声之地"><span class="site-name">无声之地</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/notes/"><i class="fa-fw iconfont icon-5"></i><span> 笔记</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">动手学Agent（2）：吴恩达翻译Agent</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-09-22T02:50:45.000Z" title="发表于 2024-09-22 10:50:45">2024-09-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-09-23T15:51:27.455Z" title="更新于 2024-09-23 23:51:27">2024-09-23</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/LLM/">LLM</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="动手学Agent（2）：吴恩达翻译Agent"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1>前言</h1>
+<p>本文是动手学Agent系列的第二篇，对吴恩达老师的<a target="_blank" rel="noopener" href="https://github.com/andrewyng/translation-agent">翻译Agent</a>的笔记。</p>
+<h1>一些临时注释</h1>
+<p>ic: icecream<br>
+<a target="_blank" rel="noopener" href="https://github.com/gruns/icecream">https://github.com/gruns/icecream</a></p>
+<h1>代码结构</h1>
+<p>最重要的内容在<a target="_blank" rel="noopener" href="https://github.com/andrewyng/translation-agent/blob/main/src/translation_agent/utils.py">./src/translation_agent/utils.py</a>里面。<br>
+这里定义了整个translation_agent库，下面以伪代码形式重写其主函数：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># MAX_TOKENS_PER_CHUNK=1000，后同</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">translate</span>(<span class="params">源语言,目标语言,待翻译文本,国家,max_tokens=MAX_TOKENS_PER_CHUNK,</span>):</span><br><span class="line">    计算待翻译文本的token数量</span><br><span class="line">    <span class="keyword">if</span> 文章token数不超过max_token:</span><br><span class="line">        文章不分块直接翻译 </span><br><span class="line">    <span class="keyword">else</span>:   <span class="comment"># 多文本块分别翻译最后合并</span></span><br><span class="line">        计算分块大小</span><br><span class="line">        使用langchain定义分块模型</span><br><span class="line">        文本分块</span><br><span class="line">        多文本块翻译并合并</span><br></pre></td></tr></table></figure>
+<p>流程图如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: 开始</span><br><span class="line">calc_tokens=&gt;operation: 计算待翻译文本的token数量</span><br><span class="line">check_tokens=&gt;condition: 文章token数不超过max_token?</span><br><span class="line">translate_whole=&gt;operation: 文章不分块直接翻译</span><br><span class="line">calc_chunk=&gt;operation: 计算分块大小</span><br><span class="line">define_model=&gt;operation: 使用langchain定义分块模型</span><br><span class="line">split_text=&gt;operation: 文本分块</span><br><span class="line">translate_chunks=&gt;operation: 多文本块翻译并合并</span><br><span class="line">end=&gt;end: 结束</span><br><span class="line"></span><br><span class="line">st-&gt;calc_tokens</span><br><span class="line">calc_tokens-&gt;check_tokens</span><br><span class="line">check_tokens(yes)-&gt;translate_whole</span><br><span class="line">translate_whole-&gt;end</span><br><span class="line">check_tokens(no)-&gt;calc_chunk</span><br><span class="line">calc_chunk-&gt;define_model</span><br><span class="line">define_model-&gt;split_text</span><br><span class="line">split_text-&gt;translate_chunks</span><br><span class="line">translate_chunks-&gt;end</span><br></pre></td></tr></table></figure>
+<h1><a target="_blank" rel="noopener" href="https://github.com/andrewyng/translation-agent/blob/main/src/translation_agent/utils.py#L263">计算文本的token数量</a></h1>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">num_tokens_in_string(</span><br><span class="line">    input_str: <span class="built_in">str</span>,</span><br><span class="line">    encoding_name: <span class="built_in">str</span> = <span class="string">&quot;cl100k_base&quot;</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>使用的encoder是GPT4使用的cl100k_base，也可换成其他的。</p>
+<h1><a target="_blank" rel="noopener" href="https://github.com/andrewyng/translation-agent/blob/main/src/translation_agent/utils.py#L231">文章不分块直接翻译</a></h1>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">one_chunk_translate_text(</span><br><span class="line">    source_lang: <span class="built_in">str</span>,</span><br><span class="line">    target_lang: <span class="built_in">str</span>,</span><br><span class="line">    source_text: <span class="built_in">str</span>,</span><br><span class="line">    country: <span class="built_in">str</span> = <span class="string">&quot;&quot;</span></span><br><span class="line">) -&gt; <span class="built_in">str</span></span><br></pre></td></tr></table></figure>
+<p>本函数使用一个线性的三段流程完成翻译：initial, reflect, improve<br>
+挺有意思的是，吴恩达老师担心GPT4不返回json格式，设置了一个if-else。这其实可以在下面的每个prompt都严格给一个json格式来解决。<br>
+各部分prompt如下：</p>
+<h2 id="initial"><a target="_blank" rel="noopener" href="https://github.com/andrewyng/translation-agent/blob/e0fc605acbb5d78cb7a58a98bc8bd8f0056df49c/src/translation_agent/utils.py#L72">initial</a></h2>
+<p>简单的角色设定+输出模板+条件限制</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">system_message = <span class="string">f&quot;You are an expert linguist, specializing in translation from <span class="subst">&#123;source_lang&#125;</span> to <span class="subst">&#123;target_lang&#125;</span>.&quot;</span></span><br><span class="line"></span><br><span class="line">translation_prompt = <span class="string">f&quot;&quot;&quot;This is an <span class="subst">&#123;source_lang&#125;</span> to <span class="subst">&#123;target_lang&#125;</span> translation, please provide the <span class="subst">&#123;target_lang&#125;</span> translation for this text. Do not provide any explanations or text apart from the translation.</span></span><br><span class="line"><span class="string"><span class="subst">&#123;source_lang&#125;</span>: <span class="subst">&#123;source_text&#125;</span></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"><span class="subst">&#123;target_lang&#125;</span>:&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="reflect"><a target="_blank" rel="noopener" href="https://github.com/andrewyng/translation-agent/blob/e0fc605acbb5d78cb7a58a98bc8bd8f0056df49c/src/translation_agent/utils.py#L100">reflect</a></h2>
+<p>system_message如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">system_message = <span class="string">f&quot;You are an expert linguist specializing in translation from <span class="subst">&#123;source_lang&#125;</span> to <span class="subst">&#123;target_lang&#125;</span>. \</span></span><br><span class="line"><span class="string">You will be provided with a source text and its translation and your goal is to improve the translation.&quot;</span></span><br></pre></td></tr></table></figure>
+<p>根据国家是否给出，有两种translation prompt:</p>
+<h3 id="国家信息不为空：">国家信息不为空：</h3>
+<p>使用了<strong>XML注释</strong>的技巧来掩盖部分的思考过程，其他的就是常见的详细要求和格式限制：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">reflection_prompt = <span class="string">f&quot;&quot;&quot;Your task is to carefully read a source text and a translation from <span class="subst">&#123;source_lang&#125;</span> to <span class="subst">&#123;target_lang&#125;</span>, and then give constructive criticisms and helpful suggestions to improve the translation. \</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">The source text and initial translation, delimited by XML tags &lt;SOURCE_TEXT&gt;&lt;/SOURCE_TEXT&gt; and &lt;TRANSLATION&gt;&lt;/TRANSLATION&gt;, are as follows:</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;SOURCE_TEXT&gt;</span></span><br><span class="line"><span class="string"><span class="subst">&#123;source_text&#125;</span></span></span><br><span class="line"><span class="string">&lt;/SOURCE_TEXT&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;TRANSLATION&gt;</span></span><br><span class="line"><span class="string"><span class="subst">&#123;translation_1&#125;</span></span></span><br><span class="line"><span class="string">&lt;/TRANSLATION&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">When writing suggestions, pay attention to whether there are ways to improve the translation&#x27;s \n\</span></span><br><span class="line"><span class="string">(i) accuracy (by correcting errors of addition, mistranslation, omission, or untranslated text),\n\</span></span><br><span class="line"><span class="string">(ii) fluency (by applying <span class="subst">&#123;target_lang&#125;</span> grammar, spelling and punctuation rules, and ensuring there are no unnecessary repetitions),\n\</span></span><br><span class="line"><span class="string">(iii) style (by ensuring the translations reflect the style of the source text and take into account any cultural context),\n\</span></span><br><span class="line"><span class="string">(iv) terminology (by ensuring terminology use is consistent and reflects the source text domain; and by only ensuring you use equivalent idioms <span class="subst">&#123;target_lang&#125;</span>).\n\</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Write a list of specific, helpful and constructive suggestions for improving the translation.</span></span><br><span class="line"><span class="string">Each suggestion should address one specific part of the translation.</span></span><br><span class="line"><span class="string">Output only the suggestions and nothing else.&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+<h3 id="国家信息为空">国家信息为空</h3>
+<p>比上面的内容就多了一条要求：<strong>翻译结果符合给定国家的语言习惯</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The final style <span class="keyword">and</span> tone of the translation should <span class="keyword">match</span> the style of &#123;target_lang&#125; colloquially spoken <span class="keyword">in</span> &#123;country&#125;.</span><br></pre></td></tr></table></figure>
+<h2 id="improve"><a target="_blank" rel="noopener" href="https://github.com/andrewyng/translation-agent/blob/e0fc605acbb5d78cb7a58a98bc8bd8f0056df49c/src/translation_agent/utils.py#L175">improve</a></h2>
+<p>技巧：XML注释，详细要求，限制条件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">system_message = <span class="string">f&quot;You are an expert linguist, specializing in translation editing from <span class="subst">&#123;source_lang&#125;</span> to <span class="subst">&#123;target_lang&#125;</span>.&quot;</span></span><br><span class="line"></span><br><span class="line">prompt = <span class="string">f&quot;&quot;&quot;Your task is to carefully read, then edit, a translation from <span class="subst">&#123;source_lang&#125;</span> to <span class="subst">&#123;target_lang&#125;</span>, taking into account a list of expert suggestions and constructive criticisms.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">The source text, the initial translation, and the expert linguist suggestions are delimited by XML tags &lt;SOURCE_TEXT&gt;&lt;/SOURCE_TEXT&gt;, &lt;TRANSLATION&gt;&lt;/TRANSLATION&gt; and &lt;EXPERT_SUGGESTIONS&gt;&lt;/EXPERT_SUGGESTIONS&gt; \</span></span><br><span class="line"><span class="string">as follows:</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;SOURCE_TEXT&gt;</span></span><br><span class="line"><span class="string"><span class="subst">&#123;source_text&#125;</span></span></span><br><span class="line"><span class="string">&lt;/SOURCE_TEXT&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;TRANSLATION&gt;</span></span><br><span class="line"><span class="string"><span class="subst">&#123;translation_1&#125;</span></span></span><br><span class="line"><span class="string">&lt;/TRANSLATION&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;EXPERT_SUGGESTIONS&gt;</span></span><br><span class="line"><span class="string"><span class="subst">&#123;reflection&#125;</span></span></span><br><span class="line"><span class="string">&lt;/EXPERT_SUGGESTIONS&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Please take into account the expert suggestions when editing the translation. Edit the translation by ensuring:</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">(i) accuracy (by correcting errors of addition, mistranslation, omission, or untranslated text),</span></span><br><span class="line"><span class="string">(ii) fluency (by applying <span class="subst">&#123;target_lang&#125;</span> grammar, spelling and punctuation rules and ensuring there are no unnecessary repetitions), \</span></span><br><span class="line"><span class="string">(iii) style (by ensuring the translations reflect the style of the source text)</span></span><br><span class="line"><span class="string">(iv) terminology (inappropriate for context, inconsistent use), or</span></span><br><span class="line"><span class="string">(v) other errors.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Output only the new translation and nothing else.&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+<p>以上为单文本块的翻译过程，接下来是多文本块的流程拆分</p>
+<h1><a target="_blank" rel="noopener" href="https://github.com/andrewyng/translation-agent/blob/main/src/translation_agent/utils.py#L594">计算分块大小</a></h1>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">calculate_chunk_size(token_count=num_tokens_in_text, token_limit=max_tokens)</span><br></pre></td></tr></table></figure>
+<p>这个函数的逻辑是这样的：<br>
+设T为<code>token_count</code>，L为<code>token_limit</code>，</p>
+<ol>
+<li>计算需要分多少块<br>
+$$N=\left\lceil\frac TL\right\rceil $$</li>
+<li>计算每块的基础数值<br>
+$$S_a=\left\lfloor\frac TN\right\rfloor $$</li>
+<li>分配剩余的token<br>
+$$R = T \mod  L$$</li>
+<li>将剩余的 tokens 均匀地添加到基础大小上：<br>
+$$S_b=\left\lfloor\frac{R}{N}\right\rfloor\<br>
+S=S_a+S_b$$<br>
+如$T=100,L=30$，<br>
+$$<br>
+\begin{align}<br>
+N&amp;=\left\lceil\frac TL\right\rceil=\left\lceil\frac{100}{30}\right\rceil=\left\lceil3.33\right\rceil=4\<br>
+S_a&amp;=\left\lfloor\frac TN\right\rfloor=\left\lfloor\frac{100}4\right\rfloor=\lfloor25\rfloor=25\<br>
+R&amp;=T\mod L=100\mod30=10\<br>
+S_a&amp;=\left\lfloor\frac{R}{N}\right\rfloor=\left\lfloor\frac{10}{4}\right\rfloor=\lfloor2.5\rfloor=2\<br>
+S&amp;=S_b+S_a=25+2=27<br>
+\end{align}<br>
+$$</li>
+</ol>
+<h1><a target="_blank" rel="noopener" href="https://github.com/andrewyng/translation-agent/blob/e0fc605acbb5d78cb7a58a98bc8bd8f0056df49c/src/translation_agent/utils.py#L8">使用langchain定义分块模型</a></h1>
+<p>Langchain库函数，不多介绍</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(</span><br><span class="line">    model_name=<span class="string">&quot;gpt-4&quot;</span>,</span><br><span class="line">    chunk_size=token_size,</span><br><span class="line">    chunk_overlap=<span class="number">0</span>,</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h1><a target="_blank" rel="noopener" href="https://github.com/andrewyng/translation-agent/blob/e0fc605acbb5d78cb7a58a98bc8bd8f0056df49c/src/translation_agent/utils.py#L666">文本分块</a></h1>
+<p>Langchain库函数，不多介绍</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source_text_chunks = text_splitter.split_text(source_text)</span><br></pre></td></tr></table></figure>
+<h1><a target="_blank" rel="noopener" href="https://github.com/andrewyng/translation-agent/blob/e0fc605acbb5d78cb7a58a98bc8bd8f0056df49c/src/translation_agent/utils.py#L554">多文本块翻译</a></h1>
+<p>类似单文本块翻译，也有initial, reflect, improve三个步骤</p>
+<h2 id="initial-2"><a target="_blank" rel="noopener" href="https://github.com/andrewyng/translation-agent/blob/main/src/translation_agent/utils.py#L288">initial</a></h2>
+<p>技巧：XML注释，详细要求，限制条件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">system_message = <span class="string">f&quot;You are an expert linguist, specializing in translation from <span class="subst">&#123;source_lang&#125;</span> to <span class="subst">&#123;target_lang&#125;</span>.&quot;</span></span><br><span class="line"></span><br><span class="line">translation_prompt = <span class="string">&quot;&quot;&quot;Your task is to provide a professional translation from &#123;source_lang&#125; to &#123;target_lang&#125; of PART of a text.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">The source text is below, delimited by XML tags &lt;SOURCE_TEXT&gt; and &lt;/SOURCE_TEXT&gt;. Translate only the part within the source text delimited by &lt;TRANSLATE_THIS&gt; and &lt;/TRANSLATE_THIS&gt;. You can use the rest of the source text as context, but do not translate any of the other text. Do not output anything other than the translation of the indicated part of the text.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;SOURCE_TEXT&gt;</span></span><br><span class="line"><span class="string">&#123;tagged_text&#125;</span></span><br><span class="line"><span class="string">&lt;/SOURCE_TEXT&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">To reiterate, you should translate only this part of the text, shown here again between &lt;TRANSLATE_THIS&gt; and &lt;/TRANSLATE_THIS&gt;:</span></span><br><span class="line"><span class="string">&lt;TRANSLATE_THIS&gt;</span></span><br><span class="line"><span class="string">&#123;chunk_to_translate&#125;</span></span><br><span class="line"><span class="string">&lt;/TRANSLATE_THIS&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Output only the translation of the portion you are asked to translate, and nothing else.</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+<p>但是<code>&#123;tagged_text&#125;</code>变成了被XML标签<code>&lt;TRANSLATE_THIS&gt;&lt;/TRANSLATE_THIS&gt;</code>包围的<strong>全文</strong>。实现代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">translation_chunks = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(source_text_chunks)):</span><br><span class="line">    <span class="comment"># Will translate chunk i</span></span><br><span class="line">    tagged_text = (</span><br><span class="line">        <span class="string">&quot;&quot;</span>.join(source_text_chunks[<span class="number">0</span>:i])    <span class="comment">#拼接前面的所有块</span></span><br><span class="line">        + <span class="string">&quot;&lt;TRANSLATE_THIS&gt;&quot;</span>                <span class="comment">#标签</span></span><br><span class="line">        + source_text_chunks[i]             <span class="comment">#待翻译的文本</span></span><br><span class="line">        + <span class="string">&quot;&lt;/TRANSLATE_THIS&gt;&quot;</span>               <span class="comment">#标签</span></span><br><span class="line">        + <span class="string">&quot;&quot;</span>.join(source_text_chunks[i + <span class="number">1</span> :])<span class="comment">#拼接后面的所有块</span></span><br><span class="line">    )</span><br><span class="line">    <span class="comment"># prompt 根据 i 和tagged_text更新 &#123;chunk_to_translate&#125;</span></span><br><span class="line">    <span class="comment"># 逐块翻译，不断拼接</span></span><br></pre></td></tr></table></figure>
+<h2 id="reflect-2"><a target="_blank" rel="noopener" href="https://github.com/andrewyng/translation-agent/blob/main/src/translation_agent/utils.py#L347">reflect</a></h2>
+<p>prompt和单块翻译类似，略；</p>
+<h2 id="improve-2"><a target="_blank" rel="noopener" href="https://github.com/andrewyng/translation-agent/blob/main/src/translation_agent/utils.py#L468">improve</a></h2>
+<p>prompt和单块翻译类似，略。</p>
+<h1>对多文本块翻译部分<code>&#123;tagged_text&#125;</code>的改进</h1>
+<p>上文的这种标注方法固然有助于LLM把握“全局视角”，但是对于过长的翻译原文，这样做有以下坏处：</p>
+<ol>
+<li>消耗大量的token。这种方法等于把整段待翻译内容重复了$\left\lceil\frac TL\right\rceil$次（T,L定义见前文）。对在线token服务这样就是过量烧钱，对本地LLM这样会显著浪费显存；</li>
+</ol>
+<blockquote>
+<p>笔者写这篇文章的时候刚入职一个月，上周隔壁组的mentor吐槽我们system prompt过长吃掉了很多显存</p>
+</blockquote>
+<ol start="2">
+<li>消耗context。哪怕现在主流的LLM的context都很长，过长的内容也会降低LLM对其中内容的把控能力；</li>
+<li>浪费时间。这个是显然的。</li>
+<li>分块的时候可能出现拆分点在句子中间的情况。上文的拆分只看定死的token数，而每个词汇句子占用的token数是不均匀的。</li>
+</ol>
+<p>对于问题1~3，一个简单的解决方法是，每次只包含待翻译块的相邻两块（如果待翻译块在文章两端，则只包含其内侧的邻居）。<br>
+简单的实现代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">translation_chunks = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(source_text_chunks)):</span><br><span class="line">    <span class="comment"># 获取当前块的上下文</span></span><br><span class="line">    prev_context = <span class="string">&quot;&quot;</span>.join(source_text_chunks[<span class="built_in">max</span>(<span class="number">0</span>, i - context_length):i])</span><br><span class="line">    next_context = <span class="string">&quot;&quot;</span>.join(source_text_chunks[i + <span class="number">1</span>:<span class="built_in">min</span>(i + context_length + <span class="number">1</span>, <span class="built_in">len</span>(source_text_chunks))])</span><br><span class="line">    tagged_text = (</span><br><span class="line">        prev_context</span><br><span class="line">        + <span class="string">&quot;&lt;TT&gt;&quot;</span></span><br><span class="line">        + source_text_chunks[i]</span><br><span class="line">        + <span class="string">&quot;&lt;/TT&gt;&quot;</span></span><br><span class="line">        + next_context</span><br><span class="line">    )</span><br><span class="line">    <span class="comment"># prompt 根据 i 和tagged_text更新 &#123;chunk_to_translate&#125;</span></span><br><span class="line">    <span class="comment"># 逐块翻译，不断拼接</span></span><br></pre></td></tr></table></figure>
+<p>对于4，可能可以通过正则拆分句子的方式，计算每句的token，再进行分组翻译。这里涉及<code>语义分割</code>了，我不是很了解，不过应该有成熟解决方案；</p>
+<p>进一步考虑：如果文本足够长，长到出现明显的章节、段落，则可以在分块时先按照章节、段落这种自然分块进行拆分，再对较长（超过<code>token_limit</code>）的块做进一步拆分。</p>
+<h1>总结和杂谈</h1>
+<p>本文总结了吴恩达老师的<a target="_blank" rel="noopener" href="https://github.com/andrewyng/translation-agent">翻译Agent</a>的流程，学习了这个Agent的设计思路和prompt设计范式，也思考了一些可能的改进措施。</p>
+<p>吴恩达老师在今年（2024年）6月份开源了这个Agent。他在X上通过这个案例讲解了分治思想在Agent设计中的应用，是一个很好的范式：此前很多开源的翻译Agent都是通过模型的长文本能力硬吃大段翻译，翻译到后面难免出现指令跟随差的现象。</p>
+<p>作者在学习过程中，也发现了这个Agent固有的大量消耗token的问题，并提出了一些简单的解决思路，希望能对读者有所启发。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">CMander</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/posts/14712.html">http://example.com/posts/14712.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">无声之地</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/agent/">agent</a></div><div class="post_share"><div class="social-share" data-image="/img/avatar.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/posts/51576.html" title="动手学Agent（1）：方法综述"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">动手学Agent（1）：方法综述</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/51576.html" title="动手学Agent（1）：方法综述"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-09-19</div><div class="title">动手学Agent（1）：方法综述</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">CMander</div><div class="author-info__description">于无声处且行吟</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">19</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">23</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/CMander02" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://space.bilibili.com/396895143" target="_blank" title="BiliBili"><i class="fab fa-bilibili" style="color: #fb7299;"></i></a><a class="social-icon" href="https://cmander02.github.io/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss" style="color: #eb6c22;"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">一些临时注释</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">代码结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">计算文本的token数量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">5.</span> <span class="toc-text">文章不分块直接翻译</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#initial"><span class="toc-number">5.1.</span> <span class="toc-text">initial</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#reflect"><span class="toc-number">5.2.</span> <span class="toc-text">reflect</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BD%E5%AE%B6%E4%BF%A1%E6%81%AF%E4%B8%8D%E4%B8%BA%E7%A9%BA%EF%BC%9A"><span class="toc-number">5.2.1.</span> <span class="toc-text">国家信息不为空：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BD%E5%AE%B6%E4%BF%A1%E6%81%AF%E4%B8%BA%E7%A9%BA"><span class="toc-number">5.2.2.</span> <span class="toc-text">国家信息为空</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#improve"><span class="toc-number">5.3.</span> <span class="toc-text">improve</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">6.</span> <span class="toc-text">计算分块大小</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">7.</span> <span class="toc-text">使用langchain定义分块模型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">8.</span> <span class="toc-text">文本分块</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">9.</span> <span class="toc-text">多文本块翻译</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#initial-2"><span class="toc-number">9.1.</span> <span class="toc-text">initial</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#reflect-2"><span class="toc-number">9.2.</span> <span class="toc-text">reflect</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#improve-2"><span class="toc-number">9.3.</span> <span class="toc-text">improve</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">10.</span> <span class="toc-text">对多文本块翻译部分{tagged_text}的改进</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">11.</span> <span class="toc-text">总结和杂谈</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/14712.html" title="动手学Agent（2）：吴恩达翻译Agent">动手学Agent（2）：吴恩达翻译Agent</a><time datetime="2024-09-22T02:50:45.000Z" title="发表于 2024-09-22 10:50:45">2024-09-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/51576.html" title="动手学Agent（1）：方法综述">动手学Agent（1）：方法综述</a><time datetime="2024-09-19T14:36:23.000Z" title="发表于 2024-09-19 22:36:23">2024-09-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/39955.html" title="Grabber 获取图片方法">Grabber 获取图片方法</a><time datetime="2024-09-16T07:03:11.000Z" title="发表于 2024-09-16 15:03:11">2024-09-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/35093.html" title="GPTo1 越狱（20240915）">GPTo1 越狱（20240915）</a><time datetime="2024-09-15T12:00:05.000Z" title="发表于 2024-09-15 20:00:05">2024-09-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/65346.html" title="Markdown测试">Markdown测试</a><time datetime="2024-09-08T06:26:27.000Z" title="发表于 2024-09-08 14:26:27">2024-09-08</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By CMander</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.13.0"></script></div></div></body></html>
